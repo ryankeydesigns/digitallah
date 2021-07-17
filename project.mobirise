@@ -17,9 +17,9 @@
         "display2Font": "Dosis",
         "display2Size": 2,
         "display5Font": "Dosis",
-        "display5Size": 1.4,
+        "display5Size": "1.6",
         "display7Font": "Dosis",
-        "display7Size": 1,
+        "display7Size": "1.2",
         "display4Font": "Open Sans",
         "display4Size": 0.8,
         "isRoundedButtons": false,
@@ -30,7 +30,8 @@
       },
       "titlePreset": "Photographer",
       "nameSelectPreset": "photographer",
-      "presetSourceTheme": "portfoliom4"
+      "presetSourceTheme": "portfoliom4",
+      "additionalSetColors": []
     },
     "path": "@PROJECT_PATH@",
     "name": "Digital Lah",
@@ -48,7 +49,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 3,
+    "uniqCompNum": 4,
     "versionPublish": "5.3.0",
     "screenshot": "screenshot.png",
     "chatbutton": {},
@@ -449,6 +450,79 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "@media (max-width: 991px)": {
+              ".mbr-section-title, .mbr-section-subtitle, .mbr-section-btn, .mbr-text": {
+                "text-align": "center"
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#082c4e"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#082c4e"
+            },
+            ".subtitle": {
+              "width": "100%",
+              "padding-bottom": "0.5rem",
+              "@media (max-width: 767px)": {
+                "display": "flex",
+                "flex-direction": "column",
+                "align-items": "center"
+              },
+              "@media (max-width: 992px)": {
+                "text-align": "center"
+              }
+            },
+            ".mbr-section-subtitle": {
+              "color": "#082c4e"
+            },
+            "span": {
+              "padding-right": "1rem"
+            },
+            ".dot": {
+              "padding-left": "1.5rem",
+              "position": "relative",
+              "&:before": {
+                "position": "absolute",
+                "top": "50%",
+                "transform": "translateY(-50%)",
+                "content": "''",
+                "left": "0",
+                "border-radius": "50%",
+                "width": "8px",
+                "height": "8px",
+                "background": "@primaryColor"
+              },
+              "@media (max-width: 767px)": {
+                "&:before": {
+                  "content": "none"
+                },
+                "padding-left": "0rem"
+              }
+            }
+          },
+          "_name": "header03",
+          "_customHTML": "<section class=\"header3\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"10\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"10\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"9\" step=\"1\">\n        <select title=\"Align\" name=\"contentAlign\">\n            <option value>Left</option>\n            <option value=\"justify-content-center\" selected>Center</option>\n            <option value=\"justify-content-end\">Right</option>\n        </select>\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle \" name=\"showSubitle\" checked>\n        <input type=\"range\" name=\"items\" title=\"Subtitle Items\" min=\"1\" max=\"3\" step=\"1\" value=\"1\" condition=\"showSubitle\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/researchm4/components/_images/background7.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row {{contentAlign}}\">\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <h2 class=\"mbr-section-title mbr-fonts-style mb-4\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">We Help You Get More Leads Online</h2>\n                <div class=\"subtitle align-left\" mbr-if=\"showSubitle\">\n                    <span mbr-text class=\"mbr-section-subtitle mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-subtitle, .subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showSubitle\">by using Social Media Marketing</span>\n                    <span mbr-text class=\"mbr-section-subtitle dot mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-subtitle, .subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"items > 1\">Filbert Street</span>\n                    <span mbr-text class=\"mbr-section-subtitle dot mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-subtitle, .subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"items > 2\">2020</span>\n                </div>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><i>Do you believe in magic touch? Because it’s our mission!\n<br></i>From an amazing friendship, <b>Digital Lah</b> is a social media agency located in KL founded by four close friends who wanted to elevate their passion in Digital Marketing and design. In our everyday life, our social feeds are crowded with unwanted noise and our objective is to bridge your brand and the things you want your audience to understand by customizing a head to toe social marketing plan. To make sure your brand voice is heard by the right audience, we provide our passion for content marketing and design to help your brand tell a story that resonates with you and your audience. Let us build your brand with our magic touch!\n<br><br><b>Who Are We\n<br></b>Social media agency, content creators, we connect people together with influencers\n<br>\n<br><b>We offer Digital Marketing Services If You Need Our Magic Touch\n</b><br>Social media management, influencer marketing, content marketing, brand and design, email&nbsp;&nbsp;<br><br><b>Our Clients\n<br></b>Coca-Cola, Authentic Tea House, Guinness, Tiger, Nestle&nbsp;<br></p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\"><a class=\"btn btn-lg btn-info-outline\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Read\n                        More</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sDoCfHqXmH",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "header03-3"
         },
         {
           "alias": false,
