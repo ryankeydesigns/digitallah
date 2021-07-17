@@ -1193,6 +1193,29 @@ a {
 .cid-sDpBCxH2jF li:hover {
   color: #ffbc00;
 }
+.cid-sDpFpJt7Ed {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  background-color: #ffffff;
+}
+.cid-sDpFpJt7Ed ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 2.5rem;
+}
+.cid-sDpFpJt7Ed li {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.cid-sDpFpJt7Ed ul li::before {
+  position: absolute;
+  left: -1.6rem;
+  content: "\2022";
+  color: #ffbc00;
+  font-weight: bold;
+  font-size: 2rem;
+  width: 1.6rem;
+}
 .cid-sDdUPx0W5S {
   padding-top: 60px;
   padding-bottom: 60px;
