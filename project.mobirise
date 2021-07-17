@@ -602,6 +602,9 @@
             },
             ".mbr-text, .mbr-section-btn": {
               "color": "#ffffff"
+            },
+            ".mbr-text UL": {
+              "text-align": "left"
             }
           },
           "_cid": "sDpy9jQJlb",
