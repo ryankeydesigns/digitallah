@@ -1219,6 +1219,107 @@ a {
   font-size: 2rem;
   width: 1.6rem;
 }
+.cid-sDG2QesOLE {
+  padding-top: 45px;
+  padding-bottom: 90px;
+  background-color: #ffffff;
+}
+.cid-sDG2QesOLE img {
+  width: 100%;
+}
+.cid-sDG2QesOLE .py-4 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+.cid-sDG2QesOLE .pt-2 {
+  padding-top: 12px !important;
+}
+.cid-sDG68FSk7B {
+  padding-top: 45px;
+  padding-bottom: 90px;
+  background-color: #f4f8fa;
+}
+.cid-sDG68FSk7B .card {
+  display: block;
+  position: relative;
+}
+.cid-sDG68FSk7B .card .card-wrapper {
+  background: #ffffff;
+  height: 1%;
+}
+.cid-sDG68FSk7B .card .card-wrapper .card-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  z-index: 1;
+}
+.cid-sDG68FSk7B .card .card-wrapper .card-img img {
+  transition: all .5s;
+}
+.cid-sDG68FSk7B .card .card-wrapper .card-img .img-text {
+  position: absolute;
+  padding: .6rem;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 1;
+  border-radius: 100px;
+  background-color: #e96188;
+}
+.cid-sDG68FSk7B .card .card-wrapper .card-img .img-text span {
+  display: block;
+}
+.cid-sDG68FSk7B .card .card-wrapper .card-box {
+  padding: 1.5rem;
+}
+.cid-sDG68FSk7B .mbr-card-text {
+  margin: 0;
+}
+.cid-sDG68FSk7B .mbr-section-title {
+  text-align: center;
+}
+.cid-sDG6VXD1v4 {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: #f4f8fa;
+}
+.cid-sDG6VXD1v4 .mbr-iconfont {
+  font-size: 34px;
+  width: 5.125rem;
+  transition: color .3s;
+  padding: 1.5rem;
+  position: absolute;
+  top: 0;
+  color: #fff;
+  margin-top: -2.5rem;
+  border-radius: 50%;
+}
+.cid-sDG6VXD1v4 .mbr-section-title {
+  margin: 0;
+}
+.cid-sDG6VXD1v4 .mbr-section-subtitle {
+  color: #8d97ad;
+}
+.cid-sDG6VXD1v4 .card-img {
+  text-align: inherit;
+}
+.cid-sDG6VXD1v4 .card-img span {
+  background: linear-gradient(90deg, #ffbc00, #ff8a8a);
+}
+.cid-sDG6VXD1v4 .mbr-text {
+  color: #8d97ad;
+}
+.cid-sDG6VXD1v4 .wrapper {
+  border-radius: .25rem;
+  padding: 2rem;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+  box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+@media (max-width: 991px) {
+  .cid-sDG6VXD1v4 .wrapper {
+    margin-bottom: 5rem;
+  }
+}
 .cid-sDdUPx0W5S {
   padding-top: 60px;
   padding-bottom: 60px;
